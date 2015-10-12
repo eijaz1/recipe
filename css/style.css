@@ -1,0 +1,240 @@
+
+/* Page Styles
+================================ */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font: normal 1.1em/1.5;
+	color: #384047;
+	background-color: #edeff0;
+	font-family: Droid Sans, sans-serif;
+}
+
+/* Icon Fonts
+================================ */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Layout Element Colors
+================================ */
+
+.header       { background-color: #384047; }
+.nav a        { background-color: #FF4F50; }
+.logo a       { background-color: #FF4F50; }
+.ingredients  { background-color: #FF4F50; }
+.directions { background-color: #384047; }
+.footer       { background-color: #b7c0c7; }
+
+/* Main Layout
+================================ */
+
+.header,
+.col {
+	padding: 20px;
+}
+.logo a, 
+.nav a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 15px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	color: #384047;
+}
+.nav a::before {
+	font-family: 'icomoon';
+  	content: attr(data-icon);
+	color: #fff;
+	position: absolute;
+	left: -30%;
+	top: 10px;
+	transition: .4s;
+}
+.nav a:hover::before {
+	left: 10%;
+}
+.footer {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/* Main Imagery
+================================ */
+
+	.feat-img {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: solid 1px;
+		padding: 5px;
+	}
+
+
+
+/* Media Queries
+================================ */
+
+@media (min-width: 1px) and (max-width: 709px) {
+	.nav li {
+		margin-top: 15px;
+	}
+	.nav li:first-child {
+		margin-top: 0;
+	}
+	
+	.banner {
+		display: none;
+	}
+	.directions {
+		color: #FF4F50;
+}
+	.logo {
+		font-family: Mrs Saint Delafield, cursive;
+}
+	.hide {
+		text-decoration: none;
+		font-size: 15px;
+		color: #384047;
+}
+}
+
+@media (min-width: 710px) {
+
+	body {
+		padding-top: 120px;
+	}
+
+
+
+
+
+	/* Header and Banner Layout
+	================================ */
+
+
+	.header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 120px;
+	}
+	.nav {
+		display: -webkit-flex;
+		display: flex;
+		height: 100%;
+
+	}
+	.nav li {
+		margin-left: 8px;
+		margin-right: 8px;
+		-webkit-align-self: center;
+		align-self: center;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		transition: .5s;
+		}
+		.nav li:hover:not(.main-logo) {
+			-webkit-flex-grow: 2;
+			flex-grow: 2;
+		}
+	.logo:first-child {
+  		margin-right: 50px;
+	}
+	.banner {
+		background: url("http://encorememorial.com/wp-content/uploads/2013/02/red-velvet.jpg");
+		text-align: center;
+		padding: 1px 15px;
+		display: block;
+		font-family: Mrs Saint Delafield, cursive;
+	}
+
+	.banner p {
+		font-size: 3em;
+	}
+
+	h1 {
+		font-family: Mrs Saint Delafield, cursive;
+	}
+
+	.banner h1{
+		font-size: 5em;
+	}
+
+	/* Column Layout
+	================================ */
+
+	.content-row {
+		display: -webkit-flex;
+		display: flex;
+	}
+	.col {
+		-webkit-flex: 1;
+		flex: 1;
+	}
+	.ingredients {
+		-webkit-flex: 1;
+		flex: 1;
+	}
+
+	.directions {
+		-webkit-flex: 2.2;
+		flex: 2.2;
+		color: #FF4F50;
+	}
+
+	/* Column Imagery
+	================================ */
+
+
+
+	.ing-img {
+		width: 50%;
+		float: left;
+		margin-right: 25px;
+	
+	}
+
+	.dir-img {
+		width: 50%;
+		float: right;
+		margin-right: 25px;
+		margin-left: 25px;
+		height: auto;
+		width: auto;
+		max-height: 150px;
+		max-width: 150px;
+		float: right;
+		box-shadow: 3px 3px #FF4F50;
+	}
+
+
+
+	/* Footer Layout
+	================================ */
+
+	.hide {
+		text-decoration: none;
+		font-size: 15px;
+		color: #384047;
+
+
+
+
+
+
